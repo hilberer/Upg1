@@ -1,4 +1,56 @@
-
+body {
+    background-color: white;
+}
 .container {
-    background-color: black;
+    display: grid;
+    grid-template-areas:
+    'picture picture bio'
+    'picture picture bio'
+    'name name name';
+}
+
+.container > * {
+
+    font-size: 30px;
+    padding: 20px 0;
+    text-align: center;
+    border: solid 1px black;
+}
+
+.box1 {
+    grid-area: picture;
+}
+.box2 {
+    grid-area: name;
+}
+.box3 {
+    grid-area: bio;
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+    .container {
+        display: grid;
+        grid-template:
+        'picture picture'
+        'name name'
+        'bio bio'
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-color: red;
+    }
+
+    .container {
+        display: grid;
+        grid-template:
+        'name'
+        'picture'
+        'bio';
+    }
+
 }
